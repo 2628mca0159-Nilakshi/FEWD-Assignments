@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8fc;
+    color: #333;
+}
+
+/* Navbar */
+
+header {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px #e9d5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #b83280;
+    font-size: 27px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d63384;
+}
+
+/* Home */
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #ffe5f0, #f0e6ff);
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 550px;
+}
+
+.home-content h3 {
+    color: #a83279;
+    margin-bottom: 15px;
+}
+
+.home-content h1 {
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.home-content h1 span {
+    color: #c13584;
+}
+
+.home-content h2 {
+    font-size: 22px;
+    color: #725080;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background: #c13584;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #86245d;
+    transform: translateY(-4px);
+}
+
+/* Profile Image */
+
+.home-image img {
+    width: 320px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 45% 45% 20px 20px;
+    border: 7px solid white;
+    box-shadow: 0 10px 30px #c99bbd;
+    transition: 0.4s;
+}
+
+.home-image img:hover {
+    transform: scale(1.04);
+}
+
+/* Common Sections */
+
+section:not(.home) {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+section h2 {
+    color: #b83280;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* About */
+
+.about-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ead4e3;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-box p {
+    line-height: 2;
+    color: #555;
+}
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 20px 35px;
+    border-radius: 12px;
+    color: #a83279;
+    font-weight: bold;
+    box-shadow: 0 3px 12px #ead4e3;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #c13584;
+    color: white;
+    transform: translateY(-7px);
+}
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 18px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ead4e3;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px #d6afca;
+}
+
+.card h3 {
+    color: #b83280;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Projects */
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-container .card {
+    flex: 1 1 230px;
+}
+
+/* Contact */
+
+.contact-box {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ead4e3;
+}
+
+.contact-box p {
+    margin: 15px;
+}
+
+/* Footer */
+
+footer {
+    background: #713c68;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-image img {
+        width: 250px;
+        height: 300px;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+}
